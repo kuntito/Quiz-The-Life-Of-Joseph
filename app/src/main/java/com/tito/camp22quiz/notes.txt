@@ -1,0 +1,8 @@
+. add transitions between fragments
+. do light theme
+
+
+# Rotation issues
+. Rotating screen changes title to Camp22 Quiz
+. Chapter grid view unevenly spaced on landscape rotation
+. Rotating screen on quiz and question grid fragment crashes the app (bug dissapears when setupViewPager is not called)

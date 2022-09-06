@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="homeScreenFragment"
+            type="com.tito.camp22quiz.ui.fragments.HomeScreenFragment" />
+    </data>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:background="@color/oxford_blue"
+            tools:context=".ui.fragments.HomeScreenFragment">
+
+
+            <Button
+                android:id="@+id/btnStudy"
+                android:layout_width="@dimen/home_screen_button_size"
+                android:layout_height="@dimen/home_screen_button_size"
+                android:text="@string/study"
+                android:onClick="@{() -> homeScreenFragment.goToStudyFragment()}"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/btnTakeQuiz"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/btnTakeQuiz"
+                android:layout_width="@dimen/home_screen_button_size"
+                android:layout_height="@dimen/home_screen_button_size"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:text="@string/take_quiz"
+                android:onClick="@{() -> homeScreenFragment.goToQuizFragment()}"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/btnStudy"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+    </layout>

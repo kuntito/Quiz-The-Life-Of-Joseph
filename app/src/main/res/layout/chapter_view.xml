@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+    </data>
+
+    <Button
+        android:id="@+id/btn_chapter_view"
+        android:text="1"
+        android:textAllCaps="true"
+        android:layout_marginTop="@dimen/grid_item_margin"
+        android:layout_marginStart="@dimen/grid_item_margin"
+        android:layout_marginEnd="@dimen/grid_item_margin"
+        android:layout_marginBottom="@dimen/grid_item_margin"
+        android:layout_width="@dimen/chapter_button_size"
+        android:layout_height="@dimen/chapter_button_size" />
+</layout>

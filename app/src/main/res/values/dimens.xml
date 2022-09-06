@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="splash_screen_logo_size">200dp</dimen>
+    <dimen name="base_padding">16dp</dimen>
+    <dimen name="action_bar_title_size">22sp</dimen>
+    <dimen name="verse_size">18sp</dimen>
+    <dimen name="app_text_size">17sp</dimen>
+    <dimen name="home_screen_button_size">110dp</dimen>
+    <dimen name="chapter_button_size">80dp</dimen>
+    <dimen name="question_button_size">80dp</dimen>
+    <dimen name="base_margin">16dp</dimen>
+    <dimen name="verse_margin">16dp</dimen>
+    <dimen name="card_view_corner_radius">20dp</dimen>
+    <dimen name="question_review_item_margin">5dp</dimen>
+    <dimen name="question_grid_icon_size">30dp</dimen>
+    <dimen name="grid_item_margin">10dp</dimen>
+    <integer name="chapters_per_row">4</integer>
+    <integer name="questions_per_row">4</integer>
+</resources>

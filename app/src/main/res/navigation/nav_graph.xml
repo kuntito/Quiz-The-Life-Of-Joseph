@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/homeScreenFragment">
+
+    <fragment
+        android:id="@+id/splashScreenFragment"
+        android:name="com.tito.camp22quiz.ui.fragments.SplashScreenFragment"
+        tools:layout="@layout/fragment_splash_screen">
+        <action
+            android:id="@+id/action_splashScreenFragment_to_homeScreenFragment"
+            app:destination="@id/homeScreenFragment"
+            app:popUpTo="@id/splashScreenFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/homeScreenFragment"
+        android:name="com.tito.camp22quiz.ui.fragments.HomeScreenFragment"
+        android:label="@string/app_name"
+        tools:layout="@layout/fragment_home_screen">
+        <action
+            android:id="@+id/action_homeScreenFragment_to_studyFragment"
+            app:destination="@id/studyFragment" />
+        <action
+            android:id="@+id/action_homeScreenFragment_to_quizFragment"
+            app:destination="@id/quizFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/studyFragment"
+        android:name="com.tito.camp22quiz.ui.fragments.StudyFragment"
+        android:label="@string/study"
+        tools:layout="@layout/fragment_study">
+        <action
+            android:id="@+id/action_studyFragment_to_versesFragment"
+            app:destination="@id/versesParentFragment" />
+        <action
+            android:id="@+id/action_studyFragment_to_versesParentFragment"
+            app:destination="@id/versesParentFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/quizFragment"
+        android:name="com.tito.camp22quiz.ui.fragments.QuizFragment"
+        android:label="Quiz"
+        tools:layout="@layout/fragment_quiz">
+        <action
+            android:id="@+id/action_quizFragment_to_quizReviewFragment"
+            app:destination="@id/quizReviewFragment"
+            app:popUpTo="@id/homeScreenFragment" />
+        <action
+            android:id="@+id/action_quizFragment_to_questionGridFragment"
+            app:destination="@id/questionGridFragment" />
+        <argument
+            android:name="selected_question"
+            android:defaultValue="-1"
+            app:argType="integer" />
+        <argument
+            android:name="origin"
+            app:argType="string"
+            android:defaultValue=""/>
+    </fragment>
+    <fragment
+        android:id="@+id/versesParentFragment"
+        android:name="com.tito.camp22quiz.ui.fragments.VersesParentFragment"
+        android:label="Verses"
+        tools:layout="@layout/fragment_verses_parent">
+        <argument
+            android:name="chapter_position"
+            app:argType="integer" />
+        <argument
+            android:name="origin"
+            android:defaultValue="study fragment"
+            app:argType="string" />
+        <argument
+            android:name="query"
+            android:defaultValue=""
+            app:argType="string" />
+        <argument
+            android:name="verse_positon_query_result"
+            android:defaultValue="-1"
+            app:argType="integer" />
+    </fragment>
+    <action
+        android:id="@+id/action_global_homeScreenFragment"
+        app:destination="@id/homeScreenFragment"
+        app:popUpTo="@id/homeScreenFragment"
+        app:popUpToInclusive="true" />
+    <fragment
+        android:id="@+id/searchFragment"
+        android:name="com.tito.camp22quiz.ui.fragments.SearchFragment"
+        android:label="Search"
+        tools:layout="@layout/fragment_search">
+        <action
+            android:id="@+id/action_searchFragment_to_versesParentFragment"
+            app:destination="@id/versesParentFragment" />
+        <argument
+            android:name="origin"
+            android:defaultValue=""
+            app:argType="string" />
+    </fragment>
+    <action
+        android:id="@+id/action_global_searchFragment"
+        app:destination="@id/searchFragment" />
+    <fragment
+        android:id="@+id/quizReviewFragment"
+        android:name="com.tito.camp22quiz.ui.fragments.QuizReviewFragment"
+        android:label="@string/quiz_review"
+        tools:layout="@layout/fragment_quiz_review">
+        <action
+            android:id="@+id/action_quizReviewFragment_to_quizFragment"
+            app:destination="@id/quizFragment"
+            app:popUpTo="@id/homeScreenFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/questionGridFragment"
+        android:name="com.tito.camp22quiz.ui.fragments.QuestionGridFragment"
+        android:label="Questions"
+        tools:layout="@layout/fragment_question_grid">
+        <action
+            android:id="@+id/action_questionGridFragment_to_quizFragment"
+            app:destination="@id/quizFragment"
+            app:popUpTo="@id/quizFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+</navigation>

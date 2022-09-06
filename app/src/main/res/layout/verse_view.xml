@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <LinearLayout
+        android:id="@+id/ll_search_result"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:background="@drawable/ripple_rectangular"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/base_margin">
+
+        <TextView
+            android:id="@+id/tv_verse_title"
+            android:layout_width="wrap_content"
+            android:visibility="gone"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            tools:text="Matthew 8:4"/>
+
+        <TextView
+            android:id="@+id/tv_verse_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:text="@string/sample_verse"/>
+
+    </LinearLayout>
+<!--    <TextView
+        android:id="@+id/tv_bible_verse"
+        android:layout_width="match_parent"
+        android:textSize="@dimen/verse_size"
+        android:layout_marginBottom="@dimen/verse_margin"
+        android:layout_height="wrap_content"
+        android:text="@string/sample_verse" />-->
+</layout>
